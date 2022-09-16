@@ -11,6 +11,10 @@
 		30C98B422864F5B00089E5A8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C98B412864F5B00089E5A8 /* ContentView.swift */; };
 		30C98B442864F5B10089E5A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30C98B432864F5B10089E5A8 /* Assets.xcassets */; };
 		30C98B472864F5B10089E5A8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30C98B462864F5B10089E5A8 /* Preview Assets.xcassets */; };
+		30C98B4F2864F80F0089E5A8 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C98B4E2864F80F0089E5A8 /* AppModel.swift */; };
+		30DEE67628D4925500F82A7D /* AppRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DEE67528D4925500F82A7D /* AppRepository.swift */; };
+		30DEE67828D49BE800F82A7D /* NavigationSidebar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DEE67728D49BE800F82A7D /* NavigationSidebar.swift */; };
+		30DEE67A28D4A58B00F82A7D /* AppAssociationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DEE67928D4A58B00F82A7D /* AppAssociationsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +24,10 @@
 		30C98B432864F5B10089E5A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		30C98B462864F5B10089E5A8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		30C98B482864F5B10089E5A8 /* fileassocmanager.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = fileassocmanager.entitlements; sourceTree = "<group>"; };
+		30C98B4E2864F80F0089E5A8 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		30DEE67528D4925500F82A7D /* AppRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRepository.swift; sourceTree = "<group>"; };
+		30DEE67728D49BE800F82A7D /* NavigationSidebar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationSidebar.swift; sourceTree = "<group>"; };
+		30DEE67928D4A58B00F82A7D /* AppAssociationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAssociationsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,11 +60,15 @@
 		30C98B3E2864F5B00089E5A8 /* fileassocmanager */ = {
 			isa = PBXGroup;
 			children = (
+				30DEE67728D49BE800F82A7D /* NavigationSidebar.swift */,
 				30C98B3F2864F5B00089E5A8 /* fileassocmanagerApp.swift */,
+				30C98B4E2864F80F0089E5A8 /* AppModel.swift */,
 				30C98B412864F5B00089E5A8 /* ContentView.swift */,
 				30C98B432864F5B10089E5A8 /* Assets.xcassets */,
 				30C98B482864F5B10089E5A8 /* fileassocmanager.entitlements */,
 				30C98B452864F5B10089E5A8 /* Preview Content */,
+				30DEE67528D4925500F82A7D /* AppRepository.swift */,
+				30DEE67928D4A58B00F82A7D /* AppAssociationsView.swift */,
 			);
 			path = fileassocmanager;
 			sourceTree = "<group>";
@@ -139,8 +151,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30DEE67828D49BE800F82A7D /* NavigationSidebar.swift in Sources */,
 				30C98B422864F5B00089E5A8 /* ContentView.swift in Sources */,
+				30DEE67A28D4A58B00F82A7D /* AppAssociationsView.swift in Sources */,
+				30C98B4F2864F80F0089E5A8 /* AppModel.swift in Sources */,
 				30C98B402864F5B00089E5A8 /* fileassocmanagerApp.swift in Sources */,
+				30DEE67628D4925500F82A7D /* AppRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,7 +213,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -251,7 +267,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -272,6 +288,8 @@
 				DEVELOPMENT_ASSET_PATHS = "\"fileassocmanager/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "File Associations Manager";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -297,6 +315,8 @@
 				DEVELOPMENT_ASSET_PATHS = "\"fileassocmanager/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "File Associations Manager";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

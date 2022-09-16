@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct fileassocmanagerApp: App {
+    @StateObject var apps = InstalledApps()
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView().navigationTitle("File Associations Manager").environmentObject(apps)
         }
     }
 }

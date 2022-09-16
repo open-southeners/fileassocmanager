@@ -8,9 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var apps: InstalledApps
+    @State private var animationAmount = 1.0
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView {
+            NavigationSidebar().environmentObject(apps)
+            AppAssociationsView().environmentObject(apps)
+        }
     }
 }
 
